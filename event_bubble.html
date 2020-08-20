@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Bubble</title>
 </head>
+
 <body>
     <div id="container">
         <h1>My List</h1>
@@ -28,14 +30,14 @@
         // document.getElementById('container').addEventListener('click',function(event){
         //     console.log('container clicked')
         // })
-        document.getElementById('add_new').addEventListener('click', function(event){
-              var itemsParent = document.getElementById('myList')
-              var li = document.createElement('li')
-              li.innerHTML = 'I am new item added by button clicked'
-              li.addClass = 'item'
-              itemsParent.appendChild(li)
+        document.getElementById('add_new').addEventListener('click', function (event) {
+            var itemsParent = document.getElementById('myList')
+            var li = document.createElement('li')
+            li.innerHTML = 'I am new item added by button clicked'
+            li.addClass = 'item'
+            itemsParent.appendChild(li)
         })
-          document.getElementById('myList').addEventListener('click',function(event){
+        document.getElementById('myList').addEventListener('click', function (event) {
             console.log(this, event.target)
             event.target.parentNode.removeChild(event.target)
         })
@@ -50,9 +52,10 @@
         //     //    console.log(event.target.parentNode)
         //     event.target.parentNode.removeChild(event.target)
         //   })
-              
+
         //   }
 
     </script>
 </body>
+
 </html>
