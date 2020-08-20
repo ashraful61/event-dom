@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+</head>
+<body>
+    <h1>Exploring Events</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolor iste adipisci inventore culpa atque illum consectetur maiores magnam incidunt?</p>
+    <p>Dignissimos aliquam quis commodi, ex laborum, id expedita dolorum nostrum ipsam illum veniam voluptas dolor? Dolores voluptatum quo delectus ratione!</p>
+    <p>Minus, ad. Hic adipisci quo omnis amet? Dolorum autem, at vero exercitationem excepturi ea maxime necessitatibus esse enim, voluptate maiores!</p>
+    <!-- <button onclick="clickMe()">click me</button>
+    <button onmousemove="clickMe()">click me</button> -->
+    <button id="btn1">Click me -1</button>
+    <button id="btn2">Click me -2</button>
+    <button>Click me -3</button>
+    <button id="lastBtn">Click me -4</button>
+    <script>
+        // function clickMe(){
+        //     console.log('Someone clicked me')
+        //     console.log(new Date())
+        //     console.log('someone move me')
+        // }
+        function handleClick(){
+            document.body.style.backgroundColor = 'cyan'
+        }
+        var secondButton = document.getElementById('btn2')
+            secondButton.onclick = function(){
+                console.log('second button clicked')
+            }
+            var firstButton = document.getElementById('btn1')
+            // firstButton.onclick = handleClick
+
+            firstButton.addEventListener('click',handleClick)
+            document.getElementById('lastBtn').addEventListener('click',function(){
+                document.body.style.color = 'tomato'
+            })
+    </script>
+</body>
+</html>

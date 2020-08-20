@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Explore</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>DOM</h2>
+            <h3>
+                Exploring DOM
+            </h3>
+            <P>mY FIRST paragraph</P>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, aliquam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <h3 class="author">author-1</h3>
+            <h3 class="author">author-2</h3>
+            <h3 class="author">author-3</h3>
+            <article id="first-article">
+                <h1>I am article-1</h1>
+                <p title="I am the most important" class="author"> Author-I</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </article>
+            <article>
+                <h3>Glocery List</h3>
+                    <ul id="gift-list">
+                        <li>gift item -1</li>
+                        <li>gift item -2</li>
+                        <li>gift item -3</li>
+                        <li>gift item -4</li>
+                        <li>gift item -5</li>
+                    </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+        // console.log(document)
+        // console.log(document.body)
+        // console.log(document.getElementsByTagName('p'))
+        // const authors = document.getElementsByClassName('author')
+        // console.log(authors)
+        // for (let i = 0; i < authors.length; i++) {
+        //     const element = authors[i];
+        //     element.innerHTML = 'Hi writer - ' + (i+1)
+        //     console.log(element)
+        //     element.style.backgroundColor ="lightblue"
+            
+        // }
+
+       var article1 = document.getElementById('first-article')
+        const newh1 = document.createElement('h1')
+        newh1.innerHTML = 'I am header 1'
+        article1.appendChild(newh1)
+
+        //add one more gift item
+        const ul = document.getElementById('gift-list')
+        const newli = document.createElement('li')
+        newli.innerHTML = 'gift item -6'
+        ul.append(newli)
+
+    </script>
+</body>
+</html>
